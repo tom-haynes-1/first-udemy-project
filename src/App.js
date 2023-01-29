@@ -3,6 +3,7 @@ import NewExpense from "./components/expenses/NewExpense";
 import Expenses from "./components/expenses/Expenses";
 
 const App = () => {
+  
   const expenses = [
     {
       id: 'e1',
