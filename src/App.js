@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NewExpense from "./components/expenses/NewExpense";
 import Expenses from "./components/expenses/Expenses";
 
-const dummyExpensesArrayOfObjs = [
+const expensesArray = [
   {
     id: 'e1',
     title: 'Toilet Paper',
@@ -30,13 +30,24 @@ const dummyExpensesArrayOfObjs = [
 
 const App = () => {
 
-  const [expenses, setExpenses] = useState(dummyExpensesArrayOfObjs);
+  const [expenses, setExpenses] = useState(expensesArray);
 
   const addExpenseHandler = (expense) => {
     setExpenses((prevExpenses) => {
       return [expense, ...prevExpenses];
     });
   };
+
+  const filterExpensesByYear = () => {
+
+    const yearsArray = expensesArray.filter(expense => {
+      return expense.date instanceof Date;
+    }).map(expense => {
+      return expense.date.getFullYear();
+    });
+
+  console.log(yearsArray);
+};
 
   return (
     <div>
@@ -51,3 +62,7 @@ const App = () => {
 };
 
 export default App;
+
+// TASK: If a user selects a year from the filter dropdown, the ExpenseItems related to that year are only shown.
+// HINTS: Look into using the array.filter method && don't make changes to the current Expenses array, 
+// rather return a new array of results based on the chosen year from the ExpenseFilter 
