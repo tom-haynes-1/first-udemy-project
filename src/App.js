@@ -41,7 +41,7 @@ const App = () => {
         onAddExpense={ addExpenseHandler } 
       />
       <Expenses 
-        expenses={ expenses } 
+        expenseItems={ expenses } 
       />
     </div>
   );
