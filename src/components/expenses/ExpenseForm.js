@@ -30,6 +30,8 @@ const ExpenseForm = (props) => {
 
     const onSubmitHandler = (event) => {
         event.preventDefault();
+        // method on the event object that cancels the event of the default request being sent 
+        // preventing page reload before the default action occurs (in this case, the form submitting before handling the JavaScript)
 
         const expenseData = {
             title: enteredTitle,
@@ -41,6 +43,7 @@ const ExpenseForm = (props) => {
         setEnteredTitle('');
         setEnteredAmount('');
         setEnteredDate('');
+
     };
         
     return (
@@ -56,7 +59,7 @@ const ExpenseForm = (props) => {
                 onChange={ titleChangeHandler }
                />
             </div>
-          <div className="new-expense__control">
+            <div className="new-expense__control">
               <label>Amount</label>
               <input 
                 type="number"
