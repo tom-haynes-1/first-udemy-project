@@ -38,17 +38,6 @@ const App = () => {
     });
   };
 
-  const filterExpensesByYear = () => {
-
-    const yearsArray = expensesArray.filter(expense => {
-      return expense.date instanceof Date;
-    }).map(expense => {
-      return expense.date.getFullYear();
-    });
-
-  console.log(yearsArray);
-};
-
   return (
     <div>
       <NewExpense 
