@@ -11,7 +11,7 @@ return (
         {
             props.chartData.map(data => 
             <ChartBar
-                key={ data.id }
+                key={ data.label }
                 value={ data.value }
                 maxValue={ totalMaximum }
                 label={ data.label }
