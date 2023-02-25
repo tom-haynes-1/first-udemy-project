@@ -51,7 +51,3 @@ const App = () => {
 };
 
 export default App;
-
-// TASK: If a user selects a year from the filter dropdown, the ExpenseItems related to that year are only shown.
-// HINTS: Look into using the array.filter method && don't make changes to the current Expenses array, 
-// rather return a new array of results based on the chosen year from the ExpenseFilter 
