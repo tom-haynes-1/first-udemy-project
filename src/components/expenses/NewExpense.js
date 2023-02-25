@@ -16,11 +16,11 @@ const NewExpense = (props) => {
       setInEditMode(false); 
     };
 
-    const formIsBeingEdited = () => {
+    const showForm = () => {
         setInEditMode(true);
     };
 
-    const formIsNotBeingEdited = () => {
+    const hideForm = () => {
         setInEditMode(false);
     };
 
@@ -30,7 +30,7 @@ return (
                 !inEditMode && (
                 <button
                     type="submit"
-                    onClick={ formIsBeingEdited }
+                    onClick={ showForm }
                 >
                     Add New Expense
                 </button>
@@ -39,7 +39,7 @@ return (
                 inEditMode && (
                 <ExpenseForm 
                     onSavedExpenseData={ savedExpenseDataHandler }
-                    onCancel={ formIsNotBeingEdited }
+                    onCancel={ hideForm }
                 />
             )}
         </div>
