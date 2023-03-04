@@ -1,16 +1,15 @@
 import React from "react";
 
 const Button = (props) => {
+
     const buttonText = props.buttonText;
-    
-    const clickHandler = () => {
-        props.clickHandler();
-    };
 
 return (
-    <div className="new-expense button">
+    <div>
         <button
-            onClick={ clickHandler }
+            className="new-expense button"
+            type={ props.type }
+            onClick={ props.onClick }
         >
             { buttonText }
         </button>
